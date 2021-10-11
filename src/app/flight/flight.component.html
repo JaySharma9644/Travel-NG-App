@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="form-container" [formGroup]="travelForm" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label>Departure</label>
+      <div><input type="text" formControlName="departure" /></div>
+    </div>
+    <div class="form-control">
+      <label>Destination</label>
+  
+      <div><input type="text" formControlName="destination" /></div>
+    </div>
+    <div class="form-control w50">
+      <label>Depart Date</label>
+  
+      <div><input type="date" formControlName="travelDate" /></div>
+    </div>
+    <div class="form-control w50">
+      <label>Return Date</label>
+  
+      <div><input type="date" formControlName="returnDate" /></div>
+    </div>
+  
+    <div class="form-control w50">
+      <label>Travelers</label>
+      <div>
+        <input type="text" formControlName="travelers" />
+      </div>
+    </div>
+    <div class="form-control w50">
+      <label>Class</label>
+      <div>
+        <input type="text" formControlName="type" />
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="!travelForm.valid">Search Flights</button>
+  </form>
+  
+</div>
+

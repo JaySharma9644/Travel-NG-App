@@ -1,0 +1,52 @@
+<div class="card-container" *ngIf="FlightsList && FlightsList.length>0">
+    <div class="card-content" *ngFor="let flight of FlightsList">
+         <div class="upper">
+             <div class="title">
+                {{flight.airlineName}}
+             </div>
+             <div class="indicator">
+                 <div class="departure">
+                    {{flight.departureTime}}
+                 </div>
+                 <div class="status">
+                    {{flight.duration}} Hr
+                    <hr/>
+                    <span *ngIf ="flight.stop>0"class="dot"></span>
+                    <span *ngIf ="flight.stop>0">
+                             1 Stop
+                    </span>
+                   
+                </div>
+                 <div class="arrival">
+                    {{flight.arrivalTime}}
+                </div>
+             </div>
+
+         </div>
+         <div class="lower">
+             <div class="bricks-container">
+                 <div class="bricks-list">
+                     <div class="bricks" *ngFor ="let quote of flight.quotation">
+                         <div class="brick-content">
+                             <div >{{quote.price}}</div>
+                             <div >{{quote.title}}</div>
+                         </div>
+                     </div>
+                   
+                 </div>
+             </div>
+
+        </div>
+
+    </div>
+
+    <div class="actions" >
+
+        <button class="sort" [routerLink]="['/flights/sort']">
+            Sort By
+        </button>
+        <button class="filters" [routerLink]="['/flights/filter']">
+            Filters
+        </button>
+    </div>
+</div>

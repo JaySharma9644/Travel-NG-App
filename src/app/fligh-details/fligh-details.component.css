@@ -1,0 +1,90 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0-5px 0 -5px;
+  background-color: #ddd;
+}
+.card-content {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-bottom: 2%;
+  padding: 10px;
+}
+.indicator {
+  width: 100%;
+  height: 80px;
+  display: flex;
+}
+.departure {
+  flex-grow: 1;
+}
+.status {
+  flex-grow: 2;
+}
+.arrival {
+  flex-grow: 1;
+}
+.bricks-list {
+  display: flex;
+  flex-direction: row;
+}
+.bricks-container {
+  display: flex;
+  flex-direction: row;
+}
+.bricks {
+    flex-grow: 0.2;
+    background-color: #0340a1;
+    height: auto;
+    border-radius: 5px;
+    width: 110px;
+}
+.bricks + .bricks {
+  margin-left: 2%;
+}
+.brick-content {
+  padding: 5px 5px;
+  color: #fff;
+  font-size: 12px;
+}
+.actions{
+  position: fixed;
+    bottom: 15%;
+    left: 50%;
+    background: #fff;
+    margin-left: -52px;
+    width: 122px;
+  
+}
+.actions button{
+  background: #fff;
+  padding: 8px;
+  cursor: pointer;
+
+  border-radius: 4px;
+}
+.status{
+  flex-grow: 2;
+  text-align: center;
+  margin-top: -17px;
+  width: 140px;
+}
+.status hr{
+  border-width: 2px;
+  margin-right: 14px;
+}
+.status .dot{
+   height: 6px;
+    width: 6px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-top: -14px;
+    display: inline-block;
+    color: beige;
+    position: absolute;
+}
+
+   
+   

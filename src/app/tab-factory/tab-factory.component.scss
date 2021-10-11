@@ -1,0 +1,21 @@
+.container{
+    padding: 10px;
+    background: #fff;
+    height: 100%;
+}
+.tabs-container {
+  display: flex;
+}
+.tabs {
+  flex-grow: 1;
+  border-bottom: 2px solid #eee;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.tabs + .tabs {
+  margin-left: 2%;
+}
+.active {
+  border-bottom: 2px solid greenyellow;
+}

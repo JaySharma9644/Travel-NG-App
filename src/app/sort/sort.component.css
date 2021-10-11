@@ -1,0 +1,21 @@
+.card-container{
+padding: 50px;
+}
+.card-container .card-list{
+height: 30px;
+}
+.card-container button{
+    border: 0;
+    background: green;
+    width: 80%;
+    margin: 0 10%;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10% 0;
+}
+.container{
+    padding: 10px;
+    background: #fff;
+    height: 100%;
+}

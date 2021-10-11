@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="tabs-container">
+    <div
+      class="tabs"
+      [class.active]="tab.id == activeTab"
+      *ngFor="let tab of tabsConfig.tabs"
+      (click)="showtab(tab)"
+    >
+      {{ tab.name }}
+    </div>
+  </div>
+  <div class="tabs-content">
+    <ng-template appAddHost></ng-template>
+  </div>
+</div>
