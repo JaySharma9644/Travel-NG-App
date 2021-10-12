@@ -16,6 +16,7 @@ export class FlighDetailsComponent implements OnInit {
     // this.flights$ = this.store.pipe(select('flights'));
     this.store.select('flights').subscribe((res) => {
       this.FlightsList = res['flights'] ? res['flights'] : [];
+      localStorage.setItem('flightList', JSON.stringify(this.FlightsList));
     });
   }
 

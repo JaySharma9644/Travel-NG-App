@@ -598,7 +598,17 @@ export class MockDataService {
     }
   }
 
-  constructor() {
-    this.mockData.map((resp) => {});
+  getCountryMasterData() {
+    var unique = [];
+    var sourcedistinct = [];
+    for (let i = 0; i < this.mockData.length; i++) {
+      if (!unique[this.mockData[i].source]) {
+        sourcedistinct.push(this.mockData[i].source);
+        unique[this.mockData[i].source] = 1;
+      }
+    }
+    return sourcedistinct;
   }
+
+  constructor() {}
 }

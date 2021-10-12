@@ -1,50 +1,24 @@
-<!-- <div class="card-container">
-   
-    <div class="card-list">
-        <input type="radio" id="durationlwh" name="durationlwh"/> Duration(lowest to Highest)
-    </div>
-    <div class="card-list">
-        <input type="radio" id="durationhlw" name="durationhlw"/> Duration(lowest to Highest)
-    </div>
-    <div class="card-list">
-        <input type="radio" id="departure" name="departure"/> Departure(lowest to Highest)
-    </div>
-    <div class="card-list">
-        <input type="radio" id="arrival" name="arrival"/> Arrival(lowest to Highest)
-    </div>
-    <div class="card-list">
-        <input type="radio" type="radio" id="airlineAZ" name="airlineAZ"/> Airline(A-Z)
-    </div>
-    <div class="card-list">
-        <input type="radio" type="radio" id="airlineZA" name="airlineZA"/>  Airline(Z-A)
-    </div>
-
-   <button (click)="Submit()">Done</button>
-</div> -->
 <div class="container">
   <form class="card-container" [formGroup]="travelForm">
     <div class="card-list">
-      <input type="checkbox" formControlName="durationLTH" /> Duration(lowest to
-      Highest)
+      <input type="radio" formControlName="duration" value="asc" />
+      Duration(lowest to Highest)
     </div>
     <div class="card-list">
-      <input type="checkbox" formControlName="durationHTL" />Duration(Highest TO
-      lowest)
-    </div>
-    <div class="card-list">
-      <input type="checkbox" formControlName="departureLTH" />Departure(lowest
-      to Highest)
-    </div>
-    <div class="card-list">
-      <input type="checkbox" formControlName="arrivalLTH" />Arrival(lowest to
-      Highest)
+      <input
+        type="radio"
+        formControlName="duration"
+        value="desc"
+      />Duration(Highest TO lowest)
     </div>
 
     <div class="card-list">
-      <input type="checkbox" formControlName="airlineAZ" /> Airline(A-Z)
+      <input type="radio" formControlName="airline" value="asc" />
+      Airline(A-Z)
     </div>
     <div class="card-list">
-      <input type="checkbox" formControlName="airlineZA" /> Airline(Z-A)
+      <input type="radio" formControlName="airline" value="desc" />
+      Airline(Z-A)
     </div>
 
     <button (click)="Submit()">Done</button>

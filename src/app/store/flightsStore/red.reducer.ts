@@ -12,12 +12,14 @@ export function FlightReducers(
       return state;
     case FlightsActions.FlightSearchConst:
       newFlights = searchFlights(action.payload.params, action.payload.data);
+
       return {
         ...state,
         flights: [...newFlights],
       };
     case FlightsActions.FlightSortConst:
       newFlights = SortFlight(action.payload.params, action.payload.data);
+
       return {
         ...state,
         flights: [...newFlights],
@@ -25,6 +27,7 @@ export function FlightReducers(
 
     case FlightsActions.FlightFilterConst:
       newFlights = filterFlight(action.payload.params, action.payload.data);
+
       return {
         ...state,
         flights: [...newFlights],
@@ -43,27 +46,51 @@ function SortFlight(res, data) {
   var parmakeys = Object.keys(res);
   parmakeys.forEach((key) => {
     switch (key) {
-      case 'airlineAZ':
-        data = data.sort((a, b) => (a.airlineName > b.airlineName ? -1 : 1));
+      case 'airline':
+        if (res['airline'] == 'asc') {
+          return [
+            ...data.sort(function (a: any, b: any) {
+              if (
+                a['airlineName'].toUpperCase() < b['airlineName'].toUpperCase()
+              )
+                return -1;
+            }),
+          ];
+        } else if (res['airline'] == 'desc') {
+          return [
+            ...data.sort(function (a: any, b: any) {
+              if (
+                a['airlineName'].toUpperCase() > b['airlineName'].toUpperCase()
+              )
+                return -1;
+            }),
+          ];
+        } else {
+          return data;
+        }
+
+      case 'duration':
+        if (res['duration'] == 'asc') {
+          return [
+            ...data.sort(function (a: any, b: any) {
+              return a['duration'] - b['duration'];
+            }),
+          ];
+        } else if (res['duration'] == 'desc') {
+          return [
+            ...data.sort(function (a: any, b: any) {
+              return b['duration'] - a['duration'];
+            }),
+          ];
+        } else {
+          return data;
+        }
+
+      default:
         return data;
-      case 'airlineZA':
-        data = data.sort((a, b) => (a.airlineName > b.airlineName ? 1 : -1));
-        return data;
-      case 'arrivalLTH':
-        data = data.sort((a, b) => (a.arrivalTime > b.arrivalTime ? -1 : 1));
-        return data;
-      case 'departureLTH':
-        data = data.sort((a, b) =>
-          a.departureTime > b.departureTime ? -1 : 1
-        );
-        return data;
-      // case 'durationHTL':
-      //   res.data =  res.data.sort((a, b) => (a.duration > b.duration ? -1 : 1));
-      //   return res.data
-      // case 'durationLTH':
-      //   res.data =  res.data.sort((a, b) => (a.duration > b.duration ? 1 : -1));
-      //   return res.data
     }
   });
   return data;
 }
+function sortAsc() {}
+function sortDesc() {}

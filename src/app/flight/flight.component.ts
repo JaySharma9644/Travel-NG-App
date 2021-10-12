@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FlightsModel} from '../store/flightsStore/flight.model';
-import { Store,select} from '@ngrx/store';
+import { FlightsModel } from '../store/flightsStore/flight.model';
+import { Store, select } from '@ngrx/store';
 import * as FilterActions from '../store/flightsStore/act.action';
 import { MockDataService } from '../mock-data.service';
 
@@ -14,11 +14,13 @@ import { MockDataService } from '../mock-data.service';
 export class FlightComponent implements OnInit {
   @Input() data: any;
   RequestData;
-  constructor(private fb: FormBuilder, 
+  cityMasterData = [];
+  constructor(
+    private fb: FormBuilder,
     private router: Router,
-    private mockDataService:MockDataService,
-    private store:Store<FlightsModel>
-    ) {
+    private mockDataService: MockDataService,
+    private store: Store<FlightsModel>
+  ) {
     this.travelForm.valueChanges.subscribe((data) => {
       this.RequestData = data;
     });
@@ -34,11 +36,17 @@ export class FlightComponent implements OnInit {
   });
 
   ngOnInit() {
+    this.cityMasterData = this.mockDataService.getCountryMasterData();
   }
   onSubmit() {
-     var mockData = this.mockDataService.getEntityDetails(this.data.entityCode);
-     var flightList = mockData.response;
-    this.store.dispatch(new FilterActions.SearchFlight({params:this.RequestData,data:flightList}) );
-    this.router.navigateByUrl('flights',this.data);
+    var mockData = this.mockDataService.getEntityDetails(this.data.entityCode);
+    var flightList = mockData.response;
+    this.store.dispatch(
+      new FilterActions.SearchFlight({
+        params: this.RequestData,
+        data: flightList,
+      })
+    );
+    this.router.navigateByUrl('flights', this.data);
   }
 }

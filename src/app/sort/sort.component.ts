@@ -25,12 +25,8 @@ export class SortComponent implements OnInit {
     });
   }
   travelForm = this.fb.group({
-    durationLTH: new FormControl(false),
-    durationHTL: new FormControl(false),
-    departureLTH: new FormControl(false),
-    arrivalLTH: new FormControl(false),
-    airlineAZ: new FormControl(false),
-    airlineZA: new FormControl(false),
+    duration: new FormControl(''),
+    airline: new FormControl(''),
   });
 
   ngOnInit(): void {}
