@@ -1,6 +1,3 @@
-.form-container {
-  flex-direction: column;
-}
 .form-control {
   width: 100%;
   height: 50px;
@@ -9,30 +6,34 @@
 .form-control.w50 {
   width: 50%;
 }
-.form-container button {
-  flex-grow: 1;
-  background-color: #fff;
-  border: 1px solid;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 .container {
   height: 100%;
 }
 .card {
   background-color: #fff;
-  padding: 5px;
+
   margin-top: 10px;
   .button-group {
     text-align: center;
   }
   p {
     border-bottom: 1px solid #ddd;
+    background-color: #eee;
+
+    padding: 10px;
+  }
+  button {
+    flex-grow: 1;
+    background-color: #eee;
+    border: 1px solid;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
   }
 }
 .price-filter-container {
-  flex-direction: row;
+  display: flex;
   padding: 10px;
 }

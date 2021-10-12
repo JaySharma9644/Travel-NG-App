@@ -16,18 +16,22 @@ export class MockDataService {
         {
           price: 125,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 212,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 300,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 400,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -49,18 +53,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -82,18 +90,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -115,10 +127,12 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
       ],
       stop: 1,
@@ -140,10 +154,12 @@ export class MockDataService {
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -165,10 +181,12 @@ export class MockDataService {
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -190,14 +208,17 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -219,10 +240,12 @@ export class MockDataService {
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -244,11 +267,13 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
 
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -270,6 +295,7 @@ export class MockDataService {
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -291,10 +317,12 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -316,10 +344,12 @@ export class MockDataService {
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -341,18 +371,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -374,10 +408,12 @@ export class MockDataService {
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -399,18 +435,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -432,10 +472,12 @@ export class MockDataService {
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -457,18 +499,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,
@@ -490,14 +536,17 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -519,18 +568,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 0,
@@ -552,18 +605,22 @@ export class MockDataService {
         {
           price: 140,
           title: 'Basic Economy',
+          id: 100,
         },
         {
           price: 200,
           title: 'Main cabin',
+          id: 201,
         },
         {
           price: 350,
           title: 'Economy',
+          id: 101,
         },
         {
           price: 450,
           title: 'First Class',
+          id: 200,
         },
       ],
       stop: 1,

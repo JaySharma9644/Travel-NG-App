@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FlightsModel } from '../store/flightsStore/flight.model';
 import { Store, select } from '@ngrx/store';
@@ -13,10 +13,16 @@ import { MockDataService } from '../mock-data.service';
 })
 export class FilterComponent implements OnInit {
   RequestData: any;
+  classFormArray: FormArray;
+  public types: Array<any> = [
+    { title: 'Business Class', id: 100, value: false },
+    { title: 'Economy Class', id: 200, value: false },
+  ];
+
   travelForm = this.fb.group({
     minPrice: new FormControl(''),
     maxPrice: new FormControl(''),
-    class: new FormControl(''),
+    types: new FormArray([]),
   });
   constructor(
     private fb: FormBuilder,
@@ -29,11 +35,17 @@ export class FilterComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.classFormArray = this.travelForm.controls.types as FormArray;
+    this.types.forEach((checkbox) => {
+      this.classFormArray.push(new FormControl(checkbox));
+    });
+  }
   Reset() {
     this.router.navigateByUrl('flights');
   }
   Apply() {
+    console.log(this.RequestData);
     var mockData = this.mockDataService.getEntityDetails(100);
     var flightList = mockData.response;
     this.store.dispatch(

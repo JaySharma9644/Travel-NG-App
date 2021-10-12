@@ -36,11 +36,16 @@ export function FlightReducers(
       return state;
   }
 }
-function searchFlights(res, data) {
+function searchFlights(params, data) {
   return data;
 }
-function filterFlight(res, data) {
-  return data;
+function filterFlight(params, data) {
+  var newData = data.filter((item) => {
+    return item.quotation.filter((quote) => {
+      return quote.price >= params.minPrice && quote.price <= params.maxPrice;
+    });
+  });
+  return newData;
 }
 function SortFlight(res, data) {
   var parmakeys = Object.keys(res);

@@ -1,30 +1,27 @@
 <div class="container">
-  <form class="form-container" [formGroup]="travelForm">
+  <form [formGroup]="travelForm">
     <div class="card">
       <p>Price Range</p>
       <div class="price-filter-container">
         <div class="form-control w50">
           <label>Minimum Price</label>
           <div>
-            <input type="text" formControlName="minPrice" />
+            <input type="number" formControlName="minPrice" />
           </div>
         </div>
         <div class="form-control w50">
           <label>Maximum Price</label>
           <div>
-            <input type="text" formControlName="maxPrice" />
+            <input type="number" formControlName="maxPrice" />
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-    <p>Booking Class</p>
+      <p>Booking Class</p>
       <div class="price-filter-container">
-        <div class="form-control w50">
-          <input type="checkbox" formControlName="class" />Business Class
-        </div>
-        <div class="form-control w50">
-          <input type="checkbox" formControlName="class" /> Econony Class
+        <div *ngFor="let group of types" class="form-control w50">
+          <input type="checkbox" value="group.value" /> {{ group.title }}
         </div>
       </div>
     </div>
