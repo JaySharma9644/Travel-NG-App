@@ -1,17 +1,23 @@
 <div class="container">
   <form class="form-container" [formGroup]="travelForm">
-    <div class="form-control w50">
-      <label>Minimum Price</label>
-      <div>
-        <input type="text" formControlName="minPrice" />
+    <div class="card">
+      <div class="price-filter-container">
+        <p>Price Range</p>
+        <div class="form-control w50">
+          <label>Minimum Price</label>
+          <div>
+            <input type="text" formControlName="minPrice" />
+          </div>
+        </div>
+        <div class="form-control w50">
+          <label>Maximum Price</label>
+          <div>
+            <input type="text" formControlName="maxPrice" />
+          </div>
+        </div>
       </div>
     </div>
-    <div class="form-control w50">
-      <label>Maximum Price</label>
-      <div>
-        <input type="text" formControlName="maxPrice" />
-      </div>
-    </div>
+
     <button class="reset" (click)="Reset()">Reset</button>
 
     <button type="submit" [disabled]="!travelForm.valid" (click)="Apply()">
