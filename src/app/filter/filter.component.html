@@ -1,8 +1,8 @@
 <div class="container">
   <form class="form-container" [formGroup]="travelForm">
     <div class="card">
+      <p>Price Range</p>
       <div class="price-filter-container">
-        <p>Price Range</p>
         <div class="form-control w50">
           <label>Minimum Price</label>
           <div>
@@ -17,11 +17,25 @@
         </div>
       </div>
     </div>
+    <div class="card">
+    <p>Booking Class</p>
+      <div class="price-filter-container">
+        <div class="form-control w50">
+          <input type="checkbox" formControlName="class" />Business Class
+        </div>
+        <div class="form-control w50">
+          <input type="checkbox" formControlName="class" /> Econony Class
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="button-group">
+        <button class="reset" (click)="Reset()">Reset</button>
 
-    <button class="reset" (click)="Reset()">Reset</button>
-
-    <button type="submit" [disabled]="!travelForm.valid" (click)="Apply()">
-      Apply
-    </button>
+        <button type="submit" [disabled]="!travelForm.valid" (click)="Apply()">
+          Apply
+        </button>
+      </div>
+    </div>
   </form>
 </div>
